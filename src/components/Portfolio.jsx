@@ -5,64 +5,122 @@ export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('about');
 
   const projects = [
+    
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "Built a full-stack e-commerce application with React, Node.js, and MongoDB.",
-      tags: ["React", "Node.js", "MongoDB"]
-    },
+      title: "SpendWise",
+      description: "Developed a comprehensive personal finance management app with expense tracking, budgeting, and analytical features. Integrated ML to predict future balance, budgeting, and impulsive spending. Placed #6 in a competitive hackathon.",
+      tags: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Machine Learning"],
+      url: "https://github.com/asleshamohanty/SpendWise.git"
+    },    
     {
       id: 2,
-      title: "Task Management App",
-      description: "Developed a task management application with drag-and-drop functionality.",
-      tags: ["React", "Firebase", "Tailwind CSS"]
-    }
+      title: "Comprehensive Stock Market Analysis and Prediction System",
+      description: "Analyzed historical stock data using EDA to uncover trends and predict future prices with Random Forest and LSTM models. Model performance is evaluated using RMSE.",
+      tags: ["Python", "EDA", "Random Forest", "LSTM", "Machine Learning", "Deep Learning", "RMSE"],
+      url: "https://github.com/asleshamohanty/learning-machine-learning/tree/main/Stock%20Price%20Analysis"
+    },  
+    {
+      id: 3,
+      title: "AI Study Assistant",
+      description: "Currently developing an AI-powered tool that summarizes study materials, generates MCQs, and provides an interactive tutor chat using LLMs.",
+      tags: ["LLM", "NLP", "Flask", "React", "Machine Learning"],
+      url: "https://github.com/asleshamohanty/AI-study-assistant"
+    },    
+    {
+      id: 4,
+      title: "Portfolio Website",
+      description: "Created a responsive personal portfolio website to showcase projects, certifications, and blogs.",
+      tags: ["React", "Tailwind CSS"],
+      url: "https://github.com/asleshamohanty/Portfolio.git"
+    },
+    {
+      id: 5,
+      title: "Cold Email Generator for Service Companies",
+      description: "Built with Groq, LangChain, and Streamlit, this tool scrapes job listings from careers pages, generates personalized cold emails, and recommends relevant portfolio links from a vector database.",
+      tags: ["Groq", "LangChain", "Streamlit", "NLP", "Machine Learning"],
+      url: "https://github.com/asleshamohanty/coldemail-generator-genai.git"
+    },
+    {
+      id: 6,
+      title: "Ola Data Analysis",
+      description: "Analyzed ride-sharing data from Ola using Python and data visualization tools to uncover insights about ride patterns, user behavior, and pricing trends.",
+      tags: ["Python", "Data Analysis", "Pandas", "Matplotlib", "Power BI"],
+      url: "https://github.com/asleshamohanty/data-analysis-projects/tree/main/Ola-Ride-Hailing-Performance-Report"
+    },
+    {
+      id: 7,
+      title: "Personal Blog",
+      description: "Created a personal blog with a photo gallery and dynamic content management for persomal use using react, flask and google oauth.",
+      tags: ["React", "Flask", "Tailwind CSS"],
+      url: "https://github.com/asleshamohanty/Personal-Blog.git"
+    },
+    {
+      id: 8,
+      title: "MediVault",
+      description: "Developing a medical records and prescription manager built with Flask and PostgreSQL, allowing secure storage, access, and management of patient health data with role-based access.",
+      tags: ["Flask", "PostgreSQL", "JWT", "React", "Tailwind CSS"],
+      url: "https://github.com/asleshamohanty/medivault.git"
+    },
+    
+    
+    
+    
+
   ];
 
   const certifications = [
     {
       id: 1,
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      link: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-      image: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+      name: "Generative AI with Large Language Models",
+      issuer: "DeepLearning.AI, Amazon Web Services",
+      link: "https://www.coursera.org/account/accomplishments/verify/DB95XPMULA0Q",
+      image: "/courses/genai.jpg"
     },
     {
       id: 2,
       name: "100 days of Python Bootcamp",
       issuer: "Udemy",
-      link: "https://www.coursera.org/professional-certificates/google-it-support",
-      image: "https://storage.googleapis.com/growable-storage-prod/2020/10/Google-IT-Support-Professional-Certificate.png"
+      link: "https://www.udemy.com/certificate/UC-98e842b0-d250-40a5-bba3-3b0819b07522/",
+      image: "/courses/python.jpg"
     },
     {
       id: 3,
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      link: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-      image: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+      name: "Tools for Data Science",
+      issuer: "IBM",
+      link: "https://www.coursera.org/account/accomplishments/verify/7LRG4WRAXPGR",
+      image: "/courses/tools.jpg"
     },
     {
       id: 4,
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      link: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-      image: "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+      name: "Foundations: Data, Data, Everywhere",
+      issuer: "Google",
+      link: "https://www.coursera.org/account/accomplishments/verify/AQ1SWH5XS638",
+      image: "/courses/data.jpg"
+    },
+    {
+      id: 5,
+      name: "Python for Data Science, AI & Development",
+      issuer: "IBM",
+      link: "https://www.coursera.org/account/accomplishments/verify/H36JZVZSU94Q",
+      image: "/courses/Python for AI & Data Science_page-0001.jpg"
+    },
+    {
+      id: 6,
+      name: "Introduction to Java and Object-Oriented Programming",
+      issuer: "University of Pennsylvania",
+      link: "https://www.coursera.org/account/accomplishments/verify/Y9IDTZMABN69",
+      image: "/courses/Java OOPS_page-0001.jpg"
     },
   ];
-
   const skillGroups = [
     {
       category: "Languages",
       icon: <Code className="h-5 w-5" />,
-      skills: ["Python", "C/C++", "Python", "Java", "HTML/CSS", "SQL", "JavaScript"]
+      skills: ["Python", "C/C++", "Java", "HTML/CSS", "SQL", "JavaScript"]
     },
     {
-      category: "Web Development Frameworks & Libraries",
-      icon: <GitBranch className="h-5 w-5" />,
-      skills: ["React", "Node.js", "Redux", "Flask", "Tailwind CSS", "FastAPI"]
-    },
-    {
-      category: "Machine Learning & AI",
+      category: "Machine Learning",
       icon: <Cpu className="h-5 w-5" />,
       skills: [
         "Supervised & Unsupervised Learning",
@@ -71,9 +129,29 @@ export default function Portfolio() {
         "Data Preprocessing & Feature Engineering",
         "ML with Scikit-learn, Pandas, NumPy",
         "Data Visualization with Matplotlib & Seaborn",
-        "Exploring AI Agents, RAG and LLMs"
+        "Time Series Forecasting with LSTMs",
+        "AI Model Evaluation (Confusion Matrix, ROC)"
       ]
-    },    
+    },
+    {
+      category: "Artificial Intelligence",
+      icon: <Cpu className="h-5 w-5" />,
+      skills: [
+        "Exploring AI Agents, RAG and LLMs",
+        "Natural Language Processing (NLP)",
+        "Deep Learning (CNNs, RNNs, GANs)",
+        "Reinforcement Learning (Q-Learning, DQN)",
+        "AI Ethics & Explainable AI",
+        "Generative Models (GANs, VAEs)",
+        "Knowledge Graphs & Ontologies",
+        "AI Model Deployment (Docker, MLflow)"
+      ]
+    },
+    {
+      category: "Web Development Frameworks & Libraries",
+      icon: <GitBranch className="h-5 w-5" />,
+      skills: ["React", "Node.js", "Redux", "Flask", "Tailwind CSS", "FastAPI"]
+    },
     {
       category: "Tools & Platforms",
       icon: <Settings className="h-5 w-5" />,
@@ -85,17 +163,14 @@ export default function Portfolio() {
       skills: ["Teamwork", "Communication", "Problem Solving", "Time Management", "Adaptability", "Leadership"]
     }
   ];
-
+  
   const researchProjects = [
     {
       id: 1,
-      title: "AI in Criminology at Airports",
-      description: "Exploring the use of AI for real-time surveillance and threat detection in airport environments using computer vision and deep learning."
-    },
-    {
-      id: 2,
-      title: "Autonomous AI Agents for Coding",
-      description: "Developing intelligent agents capable of autonomously writing and debugging code using LLMs, RAG, and reinforcement learning."
+      title: "Artificial Intelligence in Credit Scoring: Enhancing Financial Inclusion & Opportunities",
+      journal: "International Research Journal of Education and Technology (IRJEdT)",
+      link: "https://zenodo.org/records/15256246",
+      description: "Published in IRJEdT (Vol. 08, Issue 04), this paper explores the use of AI in enhancing credit scoring systems to promote financial inclusion in underserved communities."
     }
   ];
 
@@ -153,10 +228,10 @@ export default function Portfolio() {
                 />
                 <div>
                   <h1 className="text-3xl font-bold">Aslesha Mohanty</h1>
-                  <p className="text-lg text-gray-600">Undergraduate CSE Student at MIT</p>
+                  <p className="text-lg text-gray-600">Undergraduate CSE Student at Manipal Institute of Technology</p>
                 </div>
                 <p className="text-gray-700 max-w-2xl">
-                  Passionate software developer and aspiring AI/ML engineer with experience in building full-stack web apps and researching real-world applications of AI.
+                Hi, I'm Aslesha, a passionate software developer and aspiring AI/ML engineer based in Bangalore. With a strong background in machine learning, deep learning, and data science, I focus on solving real-world problems across diverse industries. I’m always learning and exploring new advancements in AI/ML. Contact me for opportunities, collaborations and more!
                 </p>
               </div>
             </div>
@@ -169,22 +244,21 @@ export default function Portfolio() {
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-medium">Software Development Intern</h4>
-                    <p className="text-gray-600">Tech Company Inc. • Summer 2023</p>
+                    <h4 className="font-medium">Undergraduate Research Assistant</h4>
+                    <p className="text-gray-600">Manipal Institute of Technology • Jan 2025 - Present</p>
                     <ul className="mt-2 list-disc list-inside text-gray-700 space-y-1">
-                      <li>Developed and maintained React components for customer dashboard</li>
-                      <li>Collaborated with team to implement new features using TypeScript</li>
-                      <li>Participated in code reviews and agile development processes</li>
+                      <li>Working on behavioral analytics using AI to profile criminal activities.</li>
+                      <li>Conducting research on utilizing AI to analyze behavioral cues such as gestures, posture, and facial expressions for criminal profiling.</li>
+                      <li>Exploring the application of Emotional AI in detecting emotional cues to improve crime detection and interrogation accuracy.</li>
                     </ul>
                   </div>
                   <div className="pt-4 border-t border-gray-100">
-                    <h4 className="font-medium">Frontend Developer (Part-time)</h4>
-                    <p className="text-gray-600">Startup Solutions • Jan 2022 - Present</p>
+                    <h4 className="font-medium">Web Development Intern</h4>
+                    <p className="text-gray-600">Orange Strokes • Dec 2024 - Jan 2025</p>
                     <ul className="mt-2 list-disc list-inside text-gray-700 space-y-1">
-                      <li>Built responsive user interfaces using React and Tailwind CSS</li>
-                      <li>Implemented state management using Redux Toolkit</li>
-                      <li>Optimized application performance reducing load times by 30%</li>
-                      <li>Worked closely with UX designers to implement pixel-perfect designs</li>
+                      <li>Worked as Web Development Intern at Orange Strokes during its revamp phase, gaining exposure to startup workflows</li>
+                      <li>Collaborated on UI/UX design before transitioning to frontend development</li>
+                      <li>Built and optimized scalable web applications using React and Next.js</li>
                     </ul>
                   </div>
                 </div>
@@ -236,24 +310,35 @@ export default function Portfolio() {
           </div>
         )}
 
-        {activeTab === 'projects' && (
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-900">My Projects</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <div key={project.id} className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-gray-700 mt-2 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs px-2 py-1 bg-gray-100 text-gray-800 rounded">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+{activeTab === 'projects' && (
+  <div className="space-y-6">
+    <h2 className="text-2xl font-bold text-gray-900">My Projects</h2>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <div key={project.id} className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h3 className="text-xl font-semibold">{project.title}</h3>
+          <p className="text-gray-700 mt-2 mb-4">{project.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span key={tag} className="text-xs px-2 py-1 bg-gray-100 text-gray-800 rounded">{tag}</span>
+            ))}
           </div>
-        )}
+          <a href={project.url} target="_blank" rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline">
+            <span>Github link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+              width="16" height="16" viewBox="0 0 24 24" fill="none" 
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
+              className="lucide lucide-link">
+              <path d="M10 13a5 5 0 0 1 7.07 0l1.42 1.42a5 5 0 0 1-7.07 7.07l-1.42-1.42"></path>
+              <path d="M14 11a5 5 0 0 0-7.07 0l-1.42 1.42a5 5 0 0 0 7.07 7.07l1.42-1.42"></path>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
 
         {activeTab === 'certifications' && (
           <div className="space-y-6">
@@ -267,7 +352,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow flex flex-col items-center text-center"
                 >
-                  <img src={cert.image} alt={cert.name} className="h-16 w-16 object-contain" />
+                  <img src={cert.image} alt={cert.name} className="h-30 w-30 object-contain" />
                   <div className="mt-4 text-lg font-semibold">{cert.name}</div>
                   <div className="text-gray-600">{cert.issuer}</div>
                   <div className="text-xs text-gray-500 mt-1">{cert.date}</div>
@@ -277,7 +362,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {activeTab === 'research' && (
+        {/* {activeTab === 'research' && (
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-900">Research Projects</h2>
             <div className="space-y-4">
@@ -285,16 +370,58 @@ export default function Portfolio() {
                 <div key={research.id} className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
                   <div className="flex items-center space-x-3">
                     <h3 className="text-xl font-semibold">{research.title}</h3>
+                    <p>Published in: {research.journal}</p>
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                       Ongoing
                     </span>
                   </div>
                   <p className="text-gray-700 mt-2">{research.description}</p>
+                  <a href={research.link} target="_blank" rel="noopener noreferrer">
+            Read the Full Paper
+          </a>
                 </div>
               ))}
             </div>
           </div>
-        )}
+        )} */}
+
+{activeTab === 'research' && (
+  <div className="space-y-8">
+    <h2 className="text-3xl font-bold text-gray-900">Research Projects</h2>
+    <div className="space-y-6">
+      {researchProjects.map((research) => (
+        <div key={research.id} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all ease-in-out duration-300">
+          <div className="flex items-center justify-between space-x-3">
+            <h3 className="text-2xl font-semibold text-gray-800">{research.title}</h3>
+            <div className="flex items-center space-x-2">
+              <p className="text-sm text-gray-600">Published in: <span className="font-medium text-gray-900">{research.journal}</span></p>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                Ongoing
+              </span>
+            </div>
+          </div>
+          <p className="text-gray-700 mt-3">{research.description}</p>
+          <div className="mt-4 flex space-x-6">
+            <a 
+              href={research.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline">
+              Read the Full Paper
+            </a>
+            <a 
+              href="/papers/1.jpg"
+              download 
+              className="text-green-600 hover:underline">
+              Download Certificate
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
 
         {activeTab === 'contact' && (
           <div className="space-y-6">
@@ -310,6 +437,12 @@ export default function Portfolio() {
                   <User className="h-5 w-5 text-gray-500" />
                   <a href="https://linkedin.com/in/aslesha-mohanty-7b8447223" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline">
                     linkedin.com/in/aslesha-mohanty-7b8447223
+                  </a>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <User className="h-5 w-5 text-gray-500" />
+                  <a href="https://github.com/asleshamohanty" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline">
+                  https://github.com/asleshamohanty
                   </a>
                 </div>
               </div>
