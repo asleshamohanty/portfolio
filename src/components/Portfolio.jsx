@@ -35,13 +35,6 @@ export default function Portfolio() {
       url: "https://github.com/asleshamohanty/Portfolio.git"
     },
     {
-      id: 5,
-      title: "Cold Email Generator for Service Companies",
-      description: "Built with Groq, LangChain, and Streamlit, this tool scrapes job listings from careers pages, generates personalized cold emails, and recommends relevant portfolio links from a vector database.",
-      tags: ["Groq", "LangChain", "Streamlit", "NLP", "Machine Learning"],
-      url: "https://github.com/asleshamohanty/coldemail-generator-genai.git"
-    },
-    {
       id: 6,
       title: "Ola Data Analysis",
       description: "Analyzed ride-sharing data from Ola using Python and data visualization tools to uncover insights about ride patterns, user behavior, and pricing trends.",
